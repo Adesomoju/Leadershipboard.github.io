@@ -4,32 +4,6 @@
 <body>
     <p>Hello world</p>
 
-    <script>
-        if (!('fetch' in window)) {
-            console.log('Fetch API not found, try including the polyfill');
-        }
-        // add json file
-        fetch('leadershipboard.json')
-            .then(response => {
-                return response.json()
-            })
-            .then(data => {
-                // Work with JSON data here
-                console.log(data)
-            })
-            .catch(err => {
-                // Do something for an error here
-                console.log('Looks like there was a problem: \n', error);
-            })
-    </script>
-    <system.webServer>
-        <handlers>
-            <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
-            <remove name="OPTIONSVerbHandler" />
-            <remove name="TRACEVerbHandler" />
-            <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
-        </handlers>
-    </system.webServer>
 </body>
 
 </html>
