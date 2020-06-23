@@ -3,6 +3,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: #24252a;
 }
 
@@ -50,6 +53,10 @@ header {
     order: 2;
 } */
 
+.menu {
+    display: none;
+}
+
 .nav_links {
     list-style: none;
 }
@@ -80,4 +87,68 @@ button {
 
 button:hover {
     background-color: rgba(0, 136, 169, 10.8);
+}
+
+
+/* //mobile responsiveness */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: #24252a;
+    transition: all 0.5s ease 0s;
+    overflow-x: hidden;
+}
+
+.overlay_content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 250px;
+}
+
+.overlay a {
+    display: block;
+    padding: 15px;
+    font-size: 36px;
+    transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+
+.overlay .close {
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav_links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay .close {
+        top: 10px;
+        right: 40px;
+        font-size: 30px;
+    }
+    .overlay a {
+        font-size: 15px;
+    }
 }

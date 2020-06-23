@@ -22,8 +22,18 @@
             </ul>
         </nav>
         <a class="cta" href="#"><button type="">Contact Us</button></a>
+        <a class="menu" onclick="openNav()" href="#"><button type="">Menu</button></a>
     </header>
-
+    <div class="overlay" id="mobile_menu">
+        <a class="close" onclick="closeNav()" href="">&times;</a>
+        <div class="overlay_content">
+            <a href="#">Service</a>
+            <a href="#">Project</a>
+            <a href="#">About Us</a>
+            <a class="cta" href="#"><button type="">Contact Us</button></a>
+        </div>
+    </div>
+    <script src="mobile.js"></script>
 </body>
 
 </html>
